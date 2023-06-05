@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import "./App.css";
+import FormColor from "./components/FormColor";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
           <h1 className="text-center display-4">Administrador de colores</h1>
           <hr />
         </section>
+        <FormColor />
       </Container>
       <footer className="bg-dark text-center text-light py-4">
         <p>&copy; Todos los derechos reservados</p>
