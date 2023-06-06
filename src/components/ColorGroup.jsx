@@ -1,35 +1,22 @@
 import { Button, Card, CardGroup } from "react-bootstrap";
 
-
-function ColorGroup() {
+const ColorGroup = ({colores}) => {
   return (
-    <CardGroup>
-      <Card>
-        <Card.Body>
-          <Card.Title>Nombre color</Card.Title>
-        </Card.Body>
-        <Card.Footer>
-          <Button variant="danger">Borrar</Button>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Nombre color</Card.Title>
-        </Card.Body>
-        <Card.Footer>
-          <Button variant="danger">Borrar</Button>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Nombre color</Card.Title>
-        </Card.Body>
-        <Card.Footer>
-          <Button variant="danger">Borrar</Button>
-        </Card.Footer>
-      </Card>
-    </CardGroup>
+    <>
+      {
+      colores.map((color, indiceColor) => 
+        <Card key={indiceColor} className="text-center text-light" style={{ backgroundColor: color }}>
+          <Card.Body>
+            <Card.Title>{color}</Card.Title>
+          </Card.Body>
+          <Card.Footer>
+            <Button variant="danger">Borrar</Button>
+          </Card.Footer>
+        </Card>
+      )
+      }
+    </>
   );
-}
+};
 
 export default ColorGroup;

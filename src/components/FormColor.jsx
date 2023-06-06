@@ -1,11 +1,10 @@
 import { Button, Form } from "react-bootstrap";
 import ColorGroup from "./ColorGroup";
 import { useState } from "react";
-import { createPortal } from "react-dom";
 
 const FormColor = () => {
   const [color, setColor] = useState("");
-  const [colores, setColores] = useState("");
+  const [colores, setColores] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
     setColores([...colores, color]);
@@ -26,7 +25,7 @@ const FormColor = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ColorGroup />
+      <ColorGroup colores={colores}></ColorGroup>
     </>
   );
 };
