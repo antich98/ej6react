@@ -1,6 +1,6 @@
 import { Button, Card, CardGroup } from "react-bootstrap";
 
-const ColorGroup = ({colores}) => {
+const ColorGroup = ({colores, borrarColor}) => {
   return (
     <>
       {
@@ -10,7 +10,7 @@ const ColorGroup = ({colores}) => {
             <Card.Title>{color}</Card.Title>
           </Card.Body>
           <Card.Footer>
-            <Button variant="danger">Borrar</Button>
+            <Button variant="danger" onClick={() => borrarColor(color)}>Borrar</Button>
           </Card.Footer>
         </Card>
       )

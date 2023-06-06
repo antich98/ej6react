@@ -10,6 +10,10 @@ const FormColor = () => {
     setColores([...colores, color]);
     setColor("");
   };
+  const borrarColor = (nombreColor) => {
+    let copiaColores = colores.filter((itemColor) => itemColor !== nombreColor);
+    setColores(copiaColores);
+  }
   return (
     <>
       <Form onSubmit={handleSubmit}>
@@ -25,7 +29,7 @@ const FormColor = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ColorGroup colores={colores}></ColorGroup>
+      <ColorGroup colores={colores} borrarColor={borrarColor}></ColorGroup>
     </>
   );
 };
