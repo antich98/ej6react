@@ -11,7 +11,7 @@ Este proyecto es un trabajo práctico de RollingCode.
 ## Como clonar el repositorio
 En una terminal ejecuta el siguiente comando:
 ```
-git clone https://github.com/antich98/reactEj4
+git clone https://github.com/antich98/ej6react
 ```
 ## Autor
 - [Santiago Antich Llarrull](https://github.com/antich98)
