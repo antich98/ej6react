@@ -1,10 +1,14 @@
 import { Button, Form } from "react-bootstrap";
 import ColorGroup from "./ColorGroup";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const FormColor = () => {
+  let coloresDelLocalStorage = JSON.parse(localStorage.getItem("arrayColores")) || [];
   const [color, setColor] = useState("");
-  const [colores, setColores] = useState([]);
+  const [colores, setColores] = useState(coloresDelLocalStorage);
+  useEffect(() => {
+    localStorage.setItem("arrayColores", JSON.stringify(colores));
+  }, [colores]);
   const handleSubmit = (e) => {
     e.preventDefault();
     setColores([...colores, color]);
